@@ -56,12 +56,13 @@ public class MessageLoggerService : BackgroundService
         {
             var client = await server.AcceptTcpClientAsync(stoppingToken);
             Task.Run(async () => await HandleRequest(client));
+            // await HandleRequest(client);
         }
     }
 
     private async Task HandleRequest(TcpClient client)
     {
-        _logger.LogDebug("Handle message saving request");
+        _logger.LogDebug("Handle message saving request.");
         var stream = client.GetStream();
         var reader = new StreamReader(stream);
         var message = await reader.ReadLineAsync();

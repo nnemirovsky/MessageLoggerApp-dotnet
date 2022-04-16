@@ -56,6 +56,7 @@ public class LoginService : BackgroundService
         {
             var client = await server.AcceptTcpClientAsync(stoppingToken);
             Task.Run(async () => await HandleRequest(client));
+            // await HandleRequest(client);
         }
     }
 
