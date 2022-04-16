@@ -22,7 +22,7 @@ public class LoginService : BackgroundService
         }
         catch (Exception ex) when (ex is ArgumentNullException or FormatException)
         {
-            _logger.LogCritical("IP address is in invalid format or null.");
+            _logger.LogCritical("IP address is not in valid format or null.");
             throw;
         }
         catch (ArgumentOutOfRangeException)
