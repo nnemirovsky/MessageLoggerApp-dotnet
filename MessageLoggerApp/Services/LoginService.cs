@@ -73,7 +73,7 @@ public class LoginService : BackgroundService
         }
 
         var token = Hasher.GetHash(identity, _salt);
-        // _logger.LogInformation(token);
+        _logger.LogInformation(token);
         await writer.WriteLineAsync(token);
         await writer.FlushAsync();
         stream.Close();
