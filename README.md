@@ -1,4 +1,4 @@
-# Test task for [veeam](http://www.veeam.com/) in C#/.NET
+# Test task for [Veeam](http://www.veeam.com/) in C#/.NET
 
 ## Задание
 
